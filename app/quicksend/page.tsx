@@ -1,37 +1,3 @@
-// import QuickHeader from "@/components/QuickHeader";
-// import React from "react";
-
-// const Page = () => {
-//   return (
-//     <div className="min-h-screen flex flex-col">
-//       <QuickHeader />
-
-//       {/* ✅ Content wrapper */}
-//       <div className="flex-1 flex items-start justify-center">
-//         {/* Add margin-top below header */}
-//         <div
-//           className="mt-10 h-[600px] w-[569px] rounded-2xl overflow-hidden relative shadow-lg"
-//           style={{
-//             backgroundImage: "url('/images/attire-bg.jpg')",
-//             backgroundSize: "cover",
-//             backgroundPosition: "center",
-//           }}
-//         >
-//           {/* Optional overlay */}
-//           <div className="absolute inset-0 bg-black/30"></div>
-
-//           {/* Content on top */}
-//           <div className="relative z-10 flex h-full items-center justify-center text-white font-bold text-2xl">
-//             hey
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Page;
-
 "use client";
 import QuickHeader from "@/components/QuickHeader";
 import React from "react";

@@ -1,14 +1,19 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import Card from "./Cards";
 import Card2 from "./Cards2";
 
-const cardVariants = {
+// ✅ Typed properly as Variants
+const cardVariants: Variants = {
   hidden: { opacity: 0, y: 50 },
-  visible: (i: number) => ({
+  visible: (custom: number) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: i * 0.2, duration: 0.3, ease: "easeOut" },
+    transition: {
+      delay: custom * 0.2,
+      duration: 0.3,
+      ease: "easeOut", // "easeOut" is valid
+    },
   }),
 };
 
@@ -75,11 +80,11 @@ export default function AnimatedCards() {
         {cards.slice(0, 2).map(({ component: Component, props }, i) => (
           <motion.div
             key={i}
+            custom={i} // ✅ pass index
             variants={cardVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: false, amount: 0.2 }}
-            custom={i}
             className="flex justify-center"
           >
             <Component {...props} />
@@ -92,11 +97,11 @@ export default function AnimatedCards() {
         {cards.slice(2).map(({ component: Component, props }, i) => (
           <motion.div
             key={i + 2}
+            custom={i + 2} // ✅ pass index
             variants={cardVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: false, amount: 0.2 }}
-            custom={i + 2}
             className="flex justify-center"
           >
             <Component {...props} />

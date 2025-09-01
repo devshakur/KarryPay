@@ -2,7 +2,7 @@
 import Button from "@/components/Button";
 import KarryPay_Logo from "@/components/KarryPay_Logo";
 import ThemeToggle from "@/components/ThemeToggle";
-import { Menu, AppleIcon, CirclePlay } from "lucide-react";
+import { AppleIcon, CirclePlay } from "lucide-react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import MotionImage from "@/components/Animation/MotionImage";

@@ -1,33 +1,3 @@
-// import React from "react";
-// import clsx from "clsx";
-
-// interface ButtonProps {
-//   text: string;
-//   className?: string;
-//   href?: string;
-//   onClick?: () => void;
-// }
-
-// const Button: React.FC<ButtonProps> = ({ text, className, href, onClick }) => {
-//   return (
-//     <button
-//       onClick={onClick}
-//       href={href}
-//       className={clsx(
-//         // ✅ Base styles (no forced padding)
-//         "rounded-3xl transition-all duration-300",
-//         "bg-[var(--color-lightbtn)] dark:bg-[var(--color-darkbtn)]",
-//         // ✅ let user completely control spacing
-//         className
-//       )}
-//     >
-//       {text}
-//     </button>
-//   );
-// };
-
-// export default Button;
-
 import React from "react";
 import clsx from "clsx";
 import Link from "next/link";
