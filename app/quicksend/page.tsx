@@ -29,7 +29,7 @@ const Page = () => {
             {/* Header */}
             <header className="flex items-center justify-center font-manrope">
               <Image
-                src="/images/Karrypay-logo.png"
+                src="/images/karrypay-logo.png"
                 alt="QuickSend Icon"
                 width={40}
                 height={40}
