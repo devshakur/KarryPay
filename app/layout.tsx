@@ -3,6 +3,7 @@ import { Geist, Manrope } from "next/font/google";
 import localFont from "next/font/local";
 import Providers from "./providers";
 import "./globals.css";
+import ClientWrapper from "@/components/ClientWrapper";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,26 +27,17 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${manrope.variable} ${otomanopee.className} antialiased`}
       >
-        {/* 
-          👇 Providers should include ThemeProvider from next-themes.
-          Example:
-          export default function Providers({ children }) {
-            return (
-              <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
-                {children}
-              </ThemeProvider>
-            );
-          }
-        */}
-        <Providers>{children}</Providers>
+        <Providers>
+          <ClientWrapper>{children}</ClientWrapper>
+        </Providers>
       </body>
     </html>
   );
