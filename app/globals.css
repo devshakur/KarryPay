@@ -3,24 +3,55 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  --darkblue: #2E358F;
+  --lightblue: #7C82E0;
+  --lightbtn: #F3F4F6;
+  --darkbtn: #333333;
+
+  /* text + logo colors */
+  --lightmodetext: #111827;
+  --darkmodetext: #ffffff;
+  --darkmodelogo: #7C82E0;
+  --lightmodelogo: #2E358F;
+  --lighttextbtn: #7c82E0;
+  --darktextbtn: #2E358F;
 }
 
+/* Tailwind inline theme mapping */
 @theme inline {
+  --font-otomanopee: var(--font-otomanopee);
+  --font-manrope: var(--font-manrope);
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-darkblue: var(--darkblue);
+  --color-lightblue: var(--lightblue);
+  --color-lightbtn: var(--lightblue);
+  --color-darkbtn: var(--darkblue);
+
+  --color-lighttext: var(--lightmodetext);
+  --color-darktext: var(--darkmodetext);
+
+  --color-current-logo: var(--current-logo);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* 🌞 Light theme */
+:root {
+  --current-text: var(--lightmodetext);
+  --current-logo: var(--lightmodelogo);
+}
+
+/* 🌙 Dark theme (activated when html/body has .dark class from ThemeProvider) */
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+
+  --current-text: var(--darkmodetext);
+  --current-logo: var(--darkmodelogo);
 }
 
 body {
   background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--current-text);
 }
