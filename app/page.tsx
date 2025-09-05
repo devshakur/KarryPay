@@ -27,13 +27,18 @@ export default function Home() {
             theme === "dark" ? "text-[#FFFFFF]" : "text-[#111827]"
           } flex-shrink-0`}
         >
-          <p className="hidden md:block  text-[14px] font-[600]">
+          <a
+            href="/Karrypay-privacy_policy.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden md:block cursor-pointer hover:text-[#2831b0]  text-[14px] font-[600]"
+          >
             KarryPay for Business
-          </p>
+          </a>
 
           <Button
             href="/quicksend"
-            className="px-6 py-2 text-[16px] font-[500] rounded-3xl"
+            className="px-6 py-2 text-white text-[16px] font-[500] rounded-3xl"
             text="QuickSend"
           />
 
@@ -87,7 +92,7 @@ export default function Home() {
                   : "/images/Frame001.svg"
               }
               alt="Description of image"
-              className="rounded-3xl w-full sm:w-[600px] md:w-[320px] lg:w-[350px] xl:w-[380px]  2xl:w-[320px] 2xl:-mt-12 h-auto"
+              className="rounded-3xl w-full sm:w-[600px] md:w-[320px] lg:w-[350px] xl:w-[380px]  2xl:w-[340px] 2xl:-mt-12 h-auto"
               width={500}
               height={100}
             />

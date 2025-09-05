@@ -16,7 +16,7 @@ const Footer = () => {
         }`}
     >
       {/* Main Footer Container */}
-      <div className="hidden md:grid grid-cols-1 md:grid-cols-5 gap-8">
+      <div className="hidden md:grid grid-cols-1 md:grid-cols-5 gap-8 mt-8">
         {/* Logo + Socials */}
         <div>
           <KarryPay_Logo />
@@ -57,11 +57,12 @@ const Footer = () => {
             <li>Terms & Conditions</li>
             <li>
               <a
-                href="/Karrypay-privacy_policy.pdf"
-                download="Privacy-Guide.pdf"
-                className="inline-block px-5 py-3 bg-[#2E358F] text-white rounded-3xl text-sm shadow hover:bg-blue-700 transition"
+                href="/Karrypay-privacy_policy.pdf" // put the PDF inside /public
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:text-[#2E358F]"
               >
-                Download Privacy Policy
+                Privacy Policy
               </a>
             </li>
           </ul>
