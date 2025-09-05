@@ -8,7 +8,7 @@ const Footer = () => {
 
   return (
     <footer
-      className={`w-[100%] mx-auto py-2 px-6 
+      className={`w-[100%] mx-auto py-2 px-6
         ${
           theme === "dark"
             ? "bg-[#2A2A2A] text-white"
@@ -55,7 +55,15 @@ const Footer = () => {
           <h4 className="font-semibold mb-3">Legals</h4>
           <ul className="space-y-2 text-sm">
             <li>Terms & Conditions</li>
-            <li>Privacy Policy</li>
+            <li>
+              <a
+                href="/Karrypay-privacy_policy.pdf"
+                download="Privacy-Guide.pdf"
+                className="inline-block px-5 py-3 bg-[#2E358F] text-white rounded-3xl text-sm shadow hover:bg-blue-700 transition"
+              >
+                Download Privacy Policy
+              </a>
+            </li>
           </ul>
         </div>
 

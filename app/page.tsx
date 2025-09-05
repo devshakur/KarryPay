@@ -83,8 +83,8 @@ export default function Home() {
             <Image
               src={
                 theme === "dark"
-                  ? "/images/Frame001-dark.png"
-                  : "/images/Frame001.png"
+                  ? "/images/Frame001-dark.svg"
+                  : "/images/Frame001.svg"
               }
               alt="Description of image"
               className="rounded-3xl w-full sm:w-[600px] md:w-[320px] lg:w-[350px] xl:w-[380px]  2xl:w-[320px] 2xl:-mt-12 h-auto"
@@ -118,8 +118,8 @@ export default function Home() {
               <MotionImage
                 src={`${
                   theme === "dark"
-                    ? "/images/Frame002-black.png"
-                    : "/images/Frame002.png"
+                    ? "/images/Frame002-black.svg"
+                    : "/images/Frame002.svg"
                 }`}
                 alt="Dashboard Snippet"
                 className="rounded-3xl w-[400px] md:w-[320px] lg:w-[350px] xl:w-[380px]  2xl:w-[390px] 2xl:-mt-12 h-auto"
@@ -162,7 +162,7 @@ export default function Home() {
           </div>
           <div className=" w-full flex justify-center items-center -mt-6 xl:-mt-12">
             <MotionImage
-              src="/images/Frame008.png"
+              src="/images/Frame008.svg"
               alt="a map"
               className="sm:w-[420px] md:w-[360px] lg:w-[350px] xl:w-[380px]  2xl:w-[390px]"
               width={320}

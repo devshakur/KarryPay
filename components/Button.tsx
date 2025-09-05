@@ -5,11 +5,18 @@ import Link from "next/link";
 interface ButtonProps {
   text: string;
   className?: string;
+  type?: "button" | "submit" | "reset";
   href?: string;
   onClick?: () => void;
 }
 
-const Button: React.FC<ButtonProps> = ({ text, className, href, onClick }) => {
+const Button: React.FC<ButtonProps> = ({
+  text,
+  className,
+  href,
+  onClick,
+  type = "submit",
+}) => {
   const baseClasses = clsx(
     "rounded-3xl transition-all duration-300",
     "bg-[var(--color-lightbtn)] dark:bg-[var(--color-darkbtn)]",
@@ -27,7 +34,7 @@ const Button: React.FC<ButtonProps> = ({ text, className, href, onClick }) => {
 
   // ✅ Otherwise, render a normal button
   return (
-    <button onClick={onClick} className={baseClasses}>
+    <button onClick={onClick} type={type} className={baseClasses}>
       {text}
     </button>
   );
